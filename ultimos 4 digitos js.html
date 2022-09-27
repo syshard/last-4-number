@@ -1,0 +1,26 @@
+
+<input type="text" name="" placeholder="informe o seu codigo" id="code">
+<button type="submit" id="btn-click">Verificar</button>
+<p id="awnsor">[Resultado]</p>
+
+
+<script type="text/javascript">
+	let fullNumber = document.getElementById("code");
+	let eventoclick = document.getElementById("btn-click");
+	let display = document.getElementById("awnsor");
+
+	eventoclick.onclick=function calcular() {
+		const str1 = '5';
+
+		console.log(str1.padStart(2, '0'));
+		// expected output: "05"
+
+		const last4Digits = fullNumber.value.slice(-4);
+		const maskedNumber = last4Digits.padStart(fullNumber.length, '*');
+
+		display.textContent="*****"+last4Digits
+		console.log(maskedNumber);
+		// expected output: "************5581"
+	}
+
+</script>
